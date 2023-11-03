@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privew Image</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class = "container">
+        <label for="nextShortcut">Phím tắt tiến tới (next):</label>
+        <input type="text" id="nextShortcut" placeholder="Nhập phím tắt">
+
+        <label for="backShortcut">Phím tắt quay lại (back):</label>
+        <input type="text" id="backShortcut" placeholder="Nhập phím tắt">
+        <img id="captchaImage" src="captcha.png" alt="Captcha">
+        <div id="Hienthi">
+            <div>
+                <input type="text" id="captchaOutput" placeholder="Hiển thị kết quả cuối cùng" readonly="false">
+            </div>
+            <label>Answer</label>
+            <div>
+                <input type="text" id="captchaInput" placeholder="Hiển thị thông tin nhập">
+            </div>
+            <div class="icon">
+                <button id="goBackButton" onclick="goBack()">Back</button>
+                <button class="edit">Edit</button>
+                <button class="submit" onclick="validateCaptcha(document.getElementById('captchaInput').value, correctCaptcha1)">Submit</button>
+                <button class="update">Update</button>
+                <button id="continueButton" onclick="continueToNewPage()">Next</button>
+            </div>
+        </div>
+    </div>
+    <script src="captcha.js"></script>
+</body>
+</html>
